@@ -1,6 +1,6 @@
 # Ping-Monitor
 
-A ping monitor site with a sleek and modern design. Built with Express, React and SASS with a host of features able monitor any number of client IPs - features include:
+A ping monitor site with a sleek, modern and responsive design. Built with Express, React and SASS with a host of features able monitor any number of client IPs - features include:
 
   * Websockets - No need to ever refresh the page as all client status visible on the page are real-time.
   * Emails - Send an email notification for when a client is offline.
@@ -8,7 +8,7 @@ A ping monitor site with a sleek and modern design. Built with Express, React an
   * Imports/Exports - Easily import and export client details with excel sheets for backups or additions.
   * Activity Log - Shows all important activities that has happened in an activity log with timestamps for the duration that the process is running.
   * Killswitch - Stop the process from the UI if an emergency occurs.
-  
+
 Technical/user documentation is provided in the root directory as Word docs/PDFs named as `NOC Technical` and `Noc UI`.
 
 ## Getting Started
