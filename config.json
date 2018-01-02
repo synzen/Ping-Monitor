@@ -1,0 +1,29 @@
+{
+  "password": "",
+  "allowedIPs": [],
+  "sqlCreds": {
+    "host": "localhost",
+    "user": "root",
+    "password": "password"
+  },
+  "database": {
+    "name": "noc_clients",
+    "tableName": "clients"
+  },
+  "emailCreds": {
+    "enabled": false,
+    "hostname": "",
+    "username": "",
+    "password": "",
+    "from": "",
+    "to": ""
+  },
+  "emailFailsafe": {
+    "intervalSeconds": 10,
+    "maxEmails": 3
+  },
+  "pingCount": 3,
+  "pingDelayMin": 1,
+  "pingConfirms": 1,
+  "activityLogLength": 50
+}

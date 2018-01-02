@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+</head>
+<style>
+body {
+  background: url('backgroundvideo.gif');
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+}
+#authorize-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  transition: .75s;
+  /*background-color: black;*/
+}
+.input-field {
+  width: 80%;
+}
+#access-pw {
+  text-align: center;
+  color: white;
+  font-size:24px;
+}
+</style>
+<body>
+<div>
+  <div id="authorize-wrap">
+    <div class="input-field">
+      <input placeholder="Provide Authorization" id="access-pw" type="password">
+    </div>
+  </div>
+</div>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+<script>
+  $('#access-pw').on('input', function(e) {
+     $.ajax({
+       url: `/resources/verifypass`,
+       type: "POST",
+       contentType: "application/json; charset=utf-8",
+       dataType: 'json',
+       data: JSON.stringify({pass: e.target.value}),
+       success: function(data) {
+         if (!data.success) return
+         console.log('TRUE!')
+         $('#access-pw').prop('disabled', true)
+         $('#authorize-wrap').css('opacity', 0)
+         setTimeout(function() {
+           window.location.href = `${location.protocol}//${location.hostname}:${location.port}/`
+
+         }, 800)
+       },
+       error: function(e, text) {
+         console.log(`process error for authorization`, text);
+       }
+     })
+  })
+</script>
+</html>
