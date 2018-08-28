@@ -17,5 +17,6 @@ Technical/user documentation is provided in the root directory as Word docs/PDFs
   * Install [MySQL](https://www.mysql.com/products/community/)
   * Clone this repo
   * Put MySQL credentials in config.json under "database" and any other details as needed
+  * Run `npm install` to install dependencies
   * Run `npm run startserver` in terminal/command prompt in the main directory
   * Enter localhost:8081 in any web browser
