@@ -20,3 +20,9 @@ Technical/user documentation is provided in the root directory as Word docs/PDFs
   * Run `npm install` to install dependencies
   * Run `npm run startserver` in terminal/command prompt in the main directory
   * Enter localhost:8081 in any web browser
+
+## Preview
+
+![Website Image](https://i.imgur.com/aIRztu3.png)
+
+**Disclaimer:** All media in public/imgs and public/video are *not* my creation. They are there as placeholders.
